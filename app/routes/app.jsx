@@ -26,7 +26,7 @@ export default function App() {
 
         <Link to="/app/additional">Additional page</Link>
         <Link to="/app/form">Subscription Form Page</Link>
-        <Link to="/app/grid">Subscription Grid Page</Link>
+        {/* <Link to="/app/grid">Subscription Grid Page</Link> */}
       </NavMenu>
       <Outlet />
     </AppProvider>

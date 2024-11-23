@@ -32,7 +32,7 @@ form button:hover {
   opacity: 0.8;
 }
 
-/* Style the subscription table */
+
 .table-container {
   width: 100%;
   margin-top: 20px;
@@ -41,7 +41,7 @@ form button:hover {
 table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Ensures equal width columns */
+  table-layout: fixed; 
 }
 
 table th,
@@ -49,14 +49,14 @@ table td {
   text-align: center;
   padding: 10px;
   border: 1px solid #ddd;
-  word-wrap: break-word; /* Ensures long text fits within cells */
+  word-wrap: break-word;
 }
 
 table th {
   background-color: #f4f4f4;
 }
 
-/* Flexbox layout for action buttons (Edit and Delete) */
+
 .actions {
   display: flex;
   gap: 10px;
@@ -72,8 +72,8 @@ button {
   transition:
     background-color 0.3s ease,
     transform 0.2s ease;
-  width: 120px; /* Ensures both buttons have the same width */
-  text-align: center; /* Centers the text */
+  width: 120px; 
+  text-align: center; 
 }
 
 .edit {

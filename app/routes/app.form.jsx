@@ -9,7 +9,7 @@ import { json } from "@remix-run/node";
 import prisma from "../db.server";
 import "../styles/subscriptions.css";
 
-// Loader to fetch subscriptions
+
 export const loader = async () => {
   const subscriptions = await prisma.subscription.findMany({
     select: {
@@ -30,7 +30,7 @@ export const loader = async () => {
   return json({ subscriptions });
 };
 
-// Action for create, edit, and delete
+
 export const action = async ({ request }) => {
   const formData = await request.formData();
   const actionType = formData.get("_action");
@@ -89,14 +89,14 @@ export default function SubscriptionPage() {
     <div>
       <h1>Manage Subscriptions</h1>
 
-      {/* Feedback Messages */}
+
       {handleSuccess}
 
       {actionData?.error && <p style={{ color: "red" }}>{actionData.error}</p>}
 
-      {/* Form Wrapper with Padding */}
+    
       <div className="form-container">
-        {/* Single Form for Create/Edit */}
+      
         <Form method="post">
           <input
             type="hidden"
@@ -116,7 +116,7 @@ export default function SubscriptionPage() {
         </Form>
       </div>
 
-      {/* Subscriptions Table */}
+  
       <h2>Subscriptions</h2>
       <div className="table-container">
         <table>
@@ -175,7 +175,7 @@ export default function SubscriptionPage() {
 }
 
 function SubscriptionForm({ data = {} }) {
-  // Ensure `data` is always an object
+ 
   const formData = data || {};
 
   return (
