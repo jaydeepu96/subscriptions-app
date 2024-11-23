@@ -1,0 +1,32 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "010f3ed9b5ab37611b72881e510ba330"
+application_url = "https://flavor-violation-notify-vsnet.trycloudflare.com"
+embedded = true
+name = "subscription"
+handle = "subscription-139"
+
+[webhooks]
+api_version = "2024-10"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://flavor-violation-notify-vsnet.trycloudflare.com/auth/callback",
+  "https://flavor-violation-notify-vsnet.trycloudflare.com/auth/shopify/callback",
+  "https://flavor-violation-notify-vsnet.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
+
+[build]
+dev_store_url = "carrier-blissclub.myshopify.com"
+automatically_update_urls_on_dev = true
